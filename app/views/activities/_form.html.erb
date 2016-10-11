@@ -1,0 +1,49 @@
+<%= form_for(activity) do |f| %>
+  <% if activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :teacher_id %>
+    <%= f.number_field :teacher_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :activity_name %>
+    <%= f.text_field :activity_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :place %>
+    <%= f.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_from %>
+    <%= f.datetime_select :date_from %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_to %>
+    <%= f.datetime_select :date_to %>
+  </div>
+
+  <div class="field">
+    <ul>
+      <% Student.where(position: @current_user.position).each do |student| %>
+           <%= check_box_tag student.first_name, student.id, :stduent => student.id %><%= student.first_name %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

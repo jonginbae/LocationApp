@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @activity_group.activity_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @activity_group.student_id %>
+</p>
+
+<p>
+  <strong>Confirm:</strong>
+  <%= @activity_group.confirm %>
+</p>
+
+<%= link_to 'Edit', edit_activity_group_path(@activity_group) %> |
+<%= link_to 'Back', activity_groups_path %>

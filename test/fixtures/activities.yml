@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  teacher_id: 1
+  activity_name: MyString
+  place: MyString
+  date_from: 2016-10-10 10:25:12
+  date_to: 2016-10-10 10:25:12
+
+two:
+  teacher_id: 1
+  activity_name: MyString
+  place: MyString
+  date_from: 2016-10-10 10:25:12
+  date_to: 2016-10-10 10:25:12

@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: teachers
+#
+#  id             :integer          not null, primary key
+#  user_id        :string
+#  email          :string
+#  password_diget :text
+#  first_name     :string
+#  last_name      :string
+#  phone_number   :string
+#  position       :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  email: MyString
+  password_diget: MyText
+  first_name: MyString
+  last_name: MyString
+  phone_number: MyString
+  position: MyString
+
+two:
+  user_id: MyString
+  email: MyString
+  password_diget: MyText
+  first_name: MyString
+  last_name: MyString
+  phone_number: MyString
+  position: MyString

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LocationApp</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAwVPu5nvMKM4KZw984ieYc0vBLzxRiSNc' %>
+    <% if @current_user.present? %>
+      <ul class="nav nav-pills">
+        <li role="presentation"><a href="/activities">Home</a></li>
+        <li role="presentation"><a href="/activities/new">New Activity</a></li>
+        <li role="presentation"><a href="/students">Students</a></li>
+        <li role="presentation"><%= link_to("ADMIN LOGOUT : #{@current_user.first_name}" , logout_path() )%></li>
+      </ul>
+    <% end %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
